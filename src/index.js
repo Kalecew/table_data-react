@@ -34,8 +34,6 @@ class App extends Component{
   }
 
   update = (targetId,e) => {
-    if(targetId)
-      this.create()
     const newProducts = Array.from(this.state.products)
     newProducts.find(item => item.id === targetId)[e.name] = e.value
     this.setState({products: newProducts})
@@ -60,18 +58,18 @@ class App extends Component{
           <tbody>
             {products.map(({id,name,description,price})=>(
               <tr className="products__tr" key={id}>
-                <td className="products__td"><input className="products__input" name="id" value={id} disabled/></td>
-                <td className="products__td"><input className="products__input" name="name" value={name} onChange={(e)=>this.update(id,e.target)}/></td>
-                <td className="products__td"><input className="products__input" name="description" value={description} onChange={(e)=>this.update(id,e.target)}/></td>
-                <td className="products__td"><input className="products__input" name="price" value={price} onChange={(e)=>this.update(id,e.target)} type="number"/></td>
+                <td className="products__td"><input class="products__input" name="id" value={id} disabled/></td>
+                <td className="products__td"><input class="products__input" name="name" value={name} onChange={(e)=>this.update(id,e.target)}/></td>
+                <td className="products__td"><input class="products__input" name="description" value={description} onChange={(e)=>this.update(id,e.target)}/></td>
+                <td className="products__td"><input class="products__input" name="price" value={price} onChange={(e)=>this.update(id,e.target)} type="number"/></td>
                 <td className="products__td"><button className="products__btn" type="button" onClick={()=>this.delete(id)}>✗</button></td>
               </tr>
             ))}
             <tr className="products__tr">
-              <td className="products__td"><input className="products__input" name="id" value="" disabled/></td>
-              <td className="products__td"><input className="products__input" name="name" value="" onChange={(e)=>this.update(null,e.target)}/></td>
-              <td className="products__td"><input className="products__input" name="description" value="" onChange={(e)=>this.update(null,e.target)}/></td>
-              <td className="products__td"><input className="products__input" name="price" value="" onLeave={(e)=>this.update(null,e.target)} type="number"/></td>
+              <td className="products__td"><input class="products__input" name="id" value="" disabled/></td>
+              <td className="products__td"><input class="products__input" name="name" value="" onChange={(e)=>this.update(null,e.target)}/></td>
+              <td className="products__td"><input class="products__input" name="description" value="" onChange={(e)=>this.update(null,e.target)}/></td>
+              <td className="products__td"><input class="products__input" name="price" value="" onChange={(e)=>this.update(null,e.target)} type="number"/></td>
               <td className="products__td"></td>
             </tr>
           </tbody>
