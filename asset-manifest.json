@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/table_data-react/static/css/main.526a36f9.css",
+    "main.js": "/table_data-react/static/js/main.dacb7112.js",
+    "index.html": "/table_data-react/index.html",
+    "main.526a36f9.css.map": "/table_data-react/static/css/main.526a36f9.css.map",
+    "main.dacb7112.js.map": "/table_data-react/static/js/main.dacb7112.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.526a36f9.css",
+    "static/js/main.dacb7112.js"
+  ]
+}
